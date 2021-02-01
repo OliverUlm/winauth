@@ -1,0 +1,27 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.user
+/Authenticator/Resources
+.vs
+Net3.5/obj
+Net3.5/x64/obj
+Net3.5/x86/obj
+Net4.5/bin
+Net4.5/obj
+Net4.5/packages
+Net4.5/x64/obj
+Net4.5/x86/obj
+Third Party/InputSimulator/bin
+Third Party/InputSimulator/obj
+Third Party/MetroFramework/MetroFramework/bin
+Third Party/MetroFramework/MetroFramework/obj
+Third Party/MetroFramework/MetroFramework.Demo/bin
+Third Party/MetroFramework/MetroFramework.Demo/obj
+Third Party/MetroFramework/MetroFramework.Design/bin
+Third Party/MetroFramework/MetroFramework.Design/obj
+Third Party/MetroFramework/MetroFramework.Fonts/bin
+Third Party/MetroFramework/MetroFramework.Fonts/obj
+WinAuth.YubiKey/Debug
+WinAuth.YubiKey/x64/Debug
