@@ -11,8 +11,8 @@ Net3.5/x86/obj
 Net4.5/bin
 Net4.5/obj
 Net4.5/packages
-Net4.5/x64/obj
-Net4.5/x86/obj
+Net4.5/x64
+Net4.5/x86
 Third Party/InputSimulator/bin
 Third Party/InputSimulator/obj
 Third Party/MetroFramework/MetroFramework/bin
@@ -24,4 +24,6 @@ Third Party/MetroFramework/MetroFramework.Design/obj
 Third Party/MetroFramework/MetroFramework.Fonts/bin
 Third Party/MetroFramework/MetroFramework.Fonts/obj
 WinAuth.YubiKey/Debug
+WinAuth.YubiKey/Release
 WinAuth.YubiKey/x64/Debug
+WinAuth.YubiKey/x64/Release

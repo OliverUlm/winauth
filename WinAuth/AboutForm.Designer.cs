@@ -44,7 +44,7 @@
             this.aboutLabel.Name = "aboutLabel";
             this.aboutLabel.Size = new System.Drawing.Size(549, 69);
             this.aboutLabel.TabIndex = 2;
-            this.aboutLabel.Text = "WinAuth {0}\r\nCopyright {1}. Colin Mackie. All rights reserved.\r\n";
+            this.aboutLabel.Text = "WinAuth Mod {0}\r\n Copyright {1}. Colin Mackie. All rights reserved.\r\n";
             // 
             // licenseLabel
             // 
@@ -94,7 +94,7 @@
             this.Name = "AboutForm";
             this.Padding = new System.Windows.Forms.Padding(30, 92, 30, 31);
             this.Resizable = false;
-            this.Text = "About WinAuth";
+            this.Text = "About WinAuth Mod";
             this.Load += new System.EventHandler(this.AboutForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
