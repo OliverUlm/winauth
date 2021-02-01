@@ -165,7 +165,7 @@ namespace WinAuth
       if (string.IsNullOrEmpty(configFile) == true)
       {
         // do we have a file specific in the registry?
-        string configDirectory = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), WinAuthMain.APPLICATION_NAME);
+        string configDirectory = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), WinAuthMain.APPLICATION_NAME);
         // check for default authenticator
         configFile = Path.Combine(configDirectory, DEFAULT_AUTHENTICATOR_FILE_NAME);
 					// if no config file, just return a blank config
@@ -288,7 +288,7 @@ namespace WinAuth
 				// if no config file yet, use default
 				if (string.IsNullOrEmpty(config.Filename) == true)
 				{
-					string configDirectory = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), WinAuthMain.APPLICATION_NAME);
+					string configDirectory = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), WinAuthMain.APPLICATION_NAME);
 					Directory.CreateDirectory(configDirectory);
 					config.Filename = Path.Combine(configDirectory, DEFAULT_AUTHENTICATOR_FILE_NAME);
 				}

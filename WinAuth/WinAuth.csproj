@@ -409,6 +409,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BetaForm.resx">
       <DependentUpon>BetaForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
@@ -480,7 +481,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.WinAuth.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
