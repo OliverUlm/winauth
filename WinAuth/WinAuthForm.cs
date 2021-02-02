@@ -1977,7 +1977,7 @@ namespace WinAuth
 		/// <param name="args"></param>
 		private void authenticatorList_DoubleClick(object source, AuthenticatorListDoubleClickEventArgs args)
 		{
-			RunAction(args.Authenticator, WinAuthConfig.NotifyActions.CopyToClipboard);
+			//RunAction(args.Authenticator, WinAuthConfig.NotifyActions.CopyToClipboard);
 		}
 
 		/// <summary>
@@ -2146,23 +2146,23 @@ namespace WinAuth
 				menu.Items.Add(new ToolStripSeparator() { Name = "changePasswordOptionsSeparatorItem" });
 			}
 
-			if (this.Config != null && this.Config.IsPortable == false)
-			{
-				menuitem = new ToolStripMenuItem(strings.MenuStartWithWindows);
-				menuitem.Name = "startWithWindowsOptionsMenuItem";
-				menuitem.Click += startWithWindowsOptionsMenuItem_Click;
-				menu.Items.Add(menuitem);
-			}
+			//if (this.Config != null && this.Config.IsPortable == false)
+			//{
+			//	menuitem = new ToolStripMenuItem(strings.MenuStartWithWindows);
+			//	menuitem.Name = "startWithWindowsOptionsMenuItem";
+			//	menuitem.Click += startWithWindowsOptionsMenuItem_Click;
+			//	menu.Items.Add(menuitem);
+			//}
 
 			menuitem = new ToolStripMenuItem(strings.MenuAlwaysOnTop);
 			menuitem.Name = "alwaysOnTopOptionsMenuItem";
 			menuitem.Click += alwaysOnTopOptionsMenuItem_Click;
 			menu.Items.Add(menuitem);
 
-			menuitem = new ToolStripMenuItem(strings.MenuUseSystemTrayIcon);
-			menuitem.Name = "useSystemTrayIconOptionsMenuItem";
-			menuitem.Click += useSystemTrayIconOptionsMenuItem_Click;
-			menu.Items.Add(menuitem);
+			//menuitem = new ToolStripMenuItem(strings.MenuUseSystemTrayIcon);
+			//menuitem.Name = "useSystemTrayIconOptionsMenuItem";
+			//menuitem.Click += useSystemTrayIconOptionsMenuItem_Click;
+			//menu.Items.Add(menuitem);
 
 			menuitem = new ToolStripMenuItem(strings.MenuAutoSize);
 			menuitem.Name = "autoSizeOptionsMenuItem";
@@ -2240,21 +2240,21 @@ namespace WinAuth
 				menuitem = new ToolStripMenuItem(strings.DefaultAction);
 				menuitem.Name = "defaultActionOptionsMenuItem";
 				menu.Items.Add(menuitem);
-				subitem = new ToolStripMenuItem(strings.DefaultActionNotification);
-				subitem.Name = "defaultActionNotificationOptionsMenuItem";
-				subitem.Click += defaultActionNotificationOptionsMenuItem_Click;
-				menuitem.DropDownItems.Add(subitem);
-				subitem = new ToolStripMenuItem(strings.DefaultActionCopyToClipboard);
-				subitem.Name = "defaultActionCopyToClipboardOptionsMenuItem";
-				subitem.Click += defaultActionCopyToClipboardOptionsMenuItem_Click;
-				menuitem.DropDownItems.Add(subitem);
-				subitem = new ToolStripMenuItem(strings.DefaultActionHotkey);
-				subitem.Name = "defaultActionHotkeyOptionsMenuItem";
-				subitem.Click += defaultActionHotkeyOptionsMenuItem_Click;
-				menuitem.DropDownItems.Add(subitem);
-				menu.Items.Add(menuitem);
+                subitem = new ToolStripMenuItem(strings.DefaultActionNotification);
+                subitem.Name = "defaultActionNotificationOptionsMenuItem";
+                subitem.Click += defaultActionNotificationOptionsMenuItem_Click;
+                menuitem.DropDownItems.Add(subitem);
+                subitem = new ToolStripMenuItem(strings.DefaultActionCopyToClipboard);
+                subitem.Name = "defaultActionCopyToClipboardOptionsMenuItem";
+                subitem.Click += defaultActionCopyToClipboardOptionsMenuItem_Click;
+                menuitem.DropDownItems.Add(subitem);
+                subitem = new ToolStripMenuItem(strings.DefaultActionHotkey);
+                subitem.Name = "defaultActionHotkeyOptionsMenuItem";
+                subitem.Click += defaultActionHotkeyOptionsMenuItem_Click;
+                menuitem.DropDownItems.Add(subitem);
+                menu.Items.Add(menuitem);
 
-				separator = new ToolStripSeparator();
+                separator = new ToolStripSeparator();
 				separator.Name = "authenticatorActionOptionsSeparatorItem";
 				menu.Items.Add(separator);
 			}
@@ -2335,11 +2335,11 @@ namespace WinAuth
 				item.Visible = (this.Config.UseTrayIcon == true && this.Visible == false);
 			}
 
-			menuitem = menu.Items.Cast<ToolStripItem>().Where(t => t.Name == "startWithWindowsOptionsMenuItem").FirstOrDefault() as ToolStripMenuItem;
-			if (menuitem != null)
-			{
-				menuitem.Checked = this.Config.StartWithWindows;
-			}
+			//menuitem = menu.Items.Cast<ToolStripItem>().Where(t => t.Name == "startWithWindowsOptionsMenuItem").FirstOrDefault() as ToolStripMenuItem;
+			//if (menuitem != null)
+			//{
+			//	menuitem.Checked = this.Config.StartWithWindows;
+			//}
 
 			menuitem = menu.Items.Cast<ToolStripItem>().Where(t => t.Name == "alwaysOnTopOptionsMenuItem").FirstOrDefault() as ToolStripMenuItem;
 			if (menuitem != null)
