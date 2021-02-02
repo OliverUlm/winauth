@@ -29,27 +29,16 @@
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
-            this.aboutLabel = new MetroFramework.Controls.MetroLabel();
             this.licenseLabel = new MetroFramework.Controls.MetroLabel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.closeButton = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
-            // 
-            // aboutLabel
-            // 
-            this.aboutLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.aboutLabel.Location = new System.Drawing.Point(34, 92);
-            this.aboutLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.aboutLabel.Name = "aboutLabel";
-            this.aboutLabel.Size = new System.Drawing.Size(549, 69);
-            this.aboutLabel.TabIndex = 2;
-            this.aboutLabel.Text = "WinAuth Mod {0}\r\n Copyright {1}. Colin Mackie. All rights reserved.\r\n";
             // 
             // licenseLabel
             // 
             this.licenseLabel.AutoSize = true;
-            this.licenseLabel.Location = new System.Drawing.Point(34, 197);
+            this.licenseLabel.Location = new System.Drawing.Point(34, 241);
             this.licenseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.licenseLabel.Name = "licenseLabel";
             this.licenseLabel.Size = new System.Drawing.Size(50, 19);
@@ -59,7 +48,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.richTextBox1.Location = new System.Drawing.Point(34, 231);
+            this.richTextBox1.Location = new System.Drawing.Point(34, 275);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
@@ -71,7 +60,7 @@
             // 
             this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.closeButton.Location = new System.Drawing.Point(471, 446);
+            this.closeButton.Location = new System.Drawing.Point(471, 505);
             this.closeButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(112, 35);
@@ -80,16 +69,28 @@
             this.closeButton.UseSelectable = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel1.Location = new System.Drawing.Point(34, 92);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(549, 125);
+            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.Text = "WinAuth Mod 3.51\r\n Copyright 2015-2017. Colin Mackie. All rights reserved.\r\n Modi" +
+    "fied Version created in 2021";
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(622, 516);
+            this.ClientSize = new System.Drawing.Size(622, 575);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.licenseLabel);
-            this.Controls.Add(this.aboutLabel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AboutForm";
             this.Padding = new System.Windows.Forms.Padding(30, 92, 30, 31);
@@ -102,10 +103,9 @@
 		}
 
 		#endregion
-
-		private MetroFramework.Controls.MetroLabel aboutLabel;
 		private MetroFramework.Controls.MetroLabel licenseLabel;
 		private System.Windows.Forms.RichTextBox richTextBox1;
 		private MetroFramework.Controls.MetroButton closeButton;
-	}
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+    }
 }

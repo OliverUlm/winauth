@@ -57,19 +57,6 @@ namespace WinAuth
 		/// <param name="e"></param>
 		private void AboutForm_Load(object sender, EventArgs e)
 		{
-			// get the version of the application
-			Version version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-			string debug = string.Empty;
-#if NETFX_3
-			debug += " for .NET 3.5";
-#endif
-#if BETA
-			debug += " (BETA)";
-#endif
-#if DEBUG
-			debug += " (DEBUG)";
-#endif
-			this.aboutLabel.Text = string.Format(this.aboutLabel.Text, version.ToString(3) + debug, DateTime.Today.Year);
 		}
 
 		/// <summary>
