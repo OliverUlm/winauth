@@ -294,50 +294,7 @@ namespace WinAuth
 		/// <returns>latest WinAuthVersionInfo or null if async</returns>
 		public virtual WinAuthVersionInfo GetLatestVersion(Action<WinAuthVersionInfo, bool, Exception> callback = null)
 		{
-			// get the update URL from the config else use the default
-			string updateUrl = WinAuthMain.WINAUTH_UPDATE_URL;
-			try
-			{
-				var settings = new System.Configuration.AppSettingsReader();
-				string appvalue = settings.GetValue("UpdateCheckUrl", typeof(string)) as string;
-				if (string.IsNullOrEmpty(appvalue) == false)
-				{
-					updateUrl = appvalue;
-				}
-			}
-			catch (Exception) { }
-			try
-			{
-				using (WebClient web = new WebClient())
-				{
-					web.Headers.Add("User-Agent", "WinAuth-" + this.CurrentVersion.ToString());
-					if (callback == null)
-					{
-						// immediate request
-						string result = web.DownloadString(updateUrl);
-						WinAuthVersionInfo latestVersion = ParseGetLatestVersion(result);
-						if (latestVersion != null)
-						{
-							// update local values
-							LastKnownLatestVersion = latestVersion.Version;
-							Config.WriteSetting(WINAUTHREGKEY_LATESTVERSION, latestVersion.Version.ToString(3));
-						}
-						return latestVersion;
-					}
-					else
-					{
-						// initiate async operation
-						web.DownloadStringCompleted += new DownloadStringCompletedEventHandler(GetLatestVersionDownloadCompleted);
-						web.DownloadStringAsync(new Uri(updateUrl), callback);
-						return null;
-					}
-				}
-			}
-			catch (Exception )
-			{
-				// don't fail if we can't get latest version
-				return null;
-			}
+            return null;
 		}
 
 		/// <summary>

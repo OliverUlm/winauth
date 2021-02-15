@@ -137,7 +137,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>..\Net4.5\x64\bin\Release\</OutputPath>
     <IntermediateOutputPath>..\Net4.5\x64\obj\Release\</IntermediateOutputPath>
-    <DefineConstants>TRACE;NETFX_4,BETA</DefineConstants>
+    <DefineConstants>TRACE;NETFX_4</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
